@@ -8,3 +8,11 @@
 node_modules
 .wrangler/
 *.tsbuildinfo
+
+# External skills are restored from skills-lock.json. Do not commit their copies.
+.claude/
+.agents/skills/*
+
+# If this project later owns a skill, unignore it explicitly:
+# !.agents/skills/my-skill/
+# !.agents/skills/my-skill/**

@@ -53,3 +53,17 @@ Once the bot is running, you can interact with it on Telegram:
 - In production, you would deploy to Cloudflare Workers and set up a permanent webhook
 - For development, ngrok provides a public URL that Telegram can use to send updates
 - The dev script ensures graceful shutdown by cleaning up webhooks and ngrok tunnels
+
+## Project skills
+
+This project uses the shared Matt Pocock skill set, including `triage` and `wayfinder`.
+
+After every fresh clone and every new Git worktree, run:
+
+```sh
+node scripts/setup-skills.mjs
+```
+
+The script restores external skills with `npx skills` from `skills-lock.json`. The resulting `.agents/skills/` files stay ignored, so the repository records dependencies rather than copied skill sources.
+
+Use `node scripts/setup-skills.mjs --links-only` when the locked skills already exist and only links for project-owned skills need rebuilding.
