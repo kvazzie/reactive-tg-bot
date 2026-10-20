@@ -1,0 +1,22 @@
+{
+  "name": "reactive-tg-bot",
+  "version": "0.1.0",
+  "description": "A simple hello world Telegram bot using Cloudflare Durable Objects and Grammy",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.ts",
+    "wrangler:dev": "wrangler dev",
+    "setup": "cp .vars.example .vars && cp .env.example .env"
+  },
+  "dependencies": {
+    "grammy": "^1.20.0"
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^0.5.0",
+    "@types/node": "^25.6.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.4.2",
+    "wrangler": "^4.81.1"
+  }
+}

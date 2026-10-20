@@ -1,0 +1,31 @@
+name = "reactive-tg-bot"
+main = "src/index.ts"
+compatibility_date = "2026-04-11"
+compatibility_flags = ["nodejs_compat"]
+
+[env.dev]
+name = "reactive-tg-bot-dev"
+compatibility_date = "2026-04-11"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# BOT_TOKEN will be set from .vars in dev
+
+[durable_objects]
+bindings = [
+  { name = "COUNTER", class_name = "Counter" },
+  { name = "USER", class_name = "UserDO" },
+  { name = "CHATS", class_name = "ChatDO" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = [ "Counter" ]
+
+[[migrations]]
+tag = "v2"
+new_classes = [ "UserDO" ]
+
+[[migrations]]
+tag = "v3"
+new_sqlite_classes = [ "ChatDO" ]

@@ -1,0 +1,10 @@
+.env*
+!.env.example
+.dev.vars*
+!.dev.vars.example
+.vars
+.vars.*
+!.vars.example
+node_modules
+.wrangler/
+*.tsbuildinfo
