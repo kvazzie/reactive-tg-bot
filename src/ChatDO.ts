@@ -171,7 +171,7 @@ const actions: Actions = {
     ctx.answerCallbackQuery()
 
     ctx.editMessageText(...toReply(
-      _jsx(CreateButtons, {counter: 1})
+      _jsx(CreateButtons, {counter: 0})
     ))
   }],
   dec: ["callbackQuery", ctx => {
